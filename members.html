@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>People — CCEL, Seoul National University</title>
+<link rel="stylesheet" href="_shared/brand/brand.css">
+<link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="css/pages.css">
+<script src="_shared/content.js"></script>
+</head>
+<body class="page">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="head-in">
+    <a class="brand" href="index.html" aria-label="CCEL home"><img class="ccel-logo" data-logo src="_shared/img/logo2.png" alt="CCEL"></a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav"><span class="bars" aria-hidden="true"></span><span class="menu-label">Menu</span></button>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <a href="index.html#research">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="members.html" aria-current="page">People</a>
+      <a href="index.html#news">News</a>
+      <a href="index.html#join">Join Us</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="strip" aria-hidden="true"><img src="_shared/scroll/hero_poster.webp" alt=""></div>
+  <div class="wrap">
+    <header class="page-head">
+      <h1>People</h1>
+      <p class="lede" id="people-lede"></p>
+      <nav class="subnav" aria-label="Groups" id="subnav"></nav>
+      <div class="filter" role="group" aria-label="Show members by approach">
+        <button type="button" data-type="" aria-pressed="true">All</button>
+        <button type="button" data-type="computational" aria-pressed="false"><span class="type t-computational">Computational</span></button>
+        <button type="button" data-type="experimental" aria-pressed="false"><span class="type t-experimental">Experimental</span></button>
+      </div>
+    </header>
+
+    <section id="professor" class="pg-sec prof" aria-labelledby="h-prof"></section>
+    <div id="groups"></div>
+    <section id="alumni" class="pg-sec" aria-labelledby="h-alumni">
+      <h2 id="h-alumni">Alumni</h2>
+      <div id="alumni-groups"></div>
+    </section>
+  </div>
+</main>
+
+<footer class="site-foot">
+  <div class="foot-in">
+    <div id="foot-info"></div>
+    <nav aria-label="Footer">
+      <a href="index.html#research">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="members.html">People</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="js/common.js"></script>
+<script src="js/members.js"></script>
+</body>
+</html>

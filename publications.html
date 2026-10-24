@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Publications — CCEL, Seoul National University</title>
+<link rel="stylesheet" href="_shared/brand/brand.css">
+<link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="css/pages.css">
+<script src="_shared/content.js"></script>
+</head>
+<body class="page">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="head-in">
+    <a class="brand" href="index.html" aria-label="CCEL home"><img class="ccel-logo" data-logo src="_shared/img/logo2.png" alt="CCEL"></a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav"><span class="bars" aria-hidden="true"></span><span class="menu-label">Menu</span></button>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <a href="index.html#research">Research</a>
+      <a href="publications.html" aria-current="page">Publications</a>
+      <a href="members.html">People</a>
+      <a href="index.html#news">News</a>
+      <a href="index.html#join">Join Us</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="strip" aria-hidden="true"><img src="_shared/scroll/hero_poster.webp" alt=""></div>
+  <div class="wrap">
+    <header class="page-head">
+      <h1>Publications</h1>
+      <p class="lede" id="pub-lede"></p>
+      <div class="tabs" role="tablist" aria-label="Publication views">
+        <a role="tab" id="tab-all" href="#all" aria-controls="all" aria-selected="true">All publications</a>
+        <a role="tab" id="tab-selected" href="#selected" aria-controls="selected" aria-selected="false">Selected</a>
+        <a role="tab" id="tab-covers" href="#covers" aria-controls="covers" aria-selected="false">Covers</a>
+      </div>
+    </header>
+
+    <section id="all" class="panel" role="tabpanel" aria-labelledby="tab-all">
+      <form class="controls" id="controls" role="search" onsubmit="return false">
+        <div class="ctl ctl-q"><label for="q">Search</label><input id="q" type="search" placeholder="Title, author or journal" autocomplete="off"></div>
+        <div class="ctl"><label for="f-year">Year</label><select id="f-year"><option value="">All years</option></select></div>
+        <div class="ctl"><label for="f-status">Status</label><select id="f-status"><option value="">All</option></select></div>
+        <div class="ctl"><label for="f-area">Research area</label><select id="f-area"><option value="">All areas</option></select></div>
+        <div class="ctl ctl-check"><input id="f-led" type="checkbox"><label for="f-led">Lab-led only</label></div>
+      </form>
+      <p class="result-count" id="count" aria-live="polite"></p>
+      <div id="list"></div>
+    </section>
+
+    <section id="selected" class="panel" role="tabpanel" aria-labelledby="tab-selected" hidden>
+      <h2>Selected Publications</h2>
+      <p class="panel-lede" id="sel-lede"></p>
+      <div id="sel-list" class="cite-list"></div>
+      <h2 class="h2-gap">Recent Highlights</h2>
+      <p class="panel-lede">Recent lab-led papers, filled automatically when a paper is added.</p>
+      <div id="hl-list" class="cite-list"></div>
+      <details class="rules" id="rules"><summary>How these two lists are chosen</summary><p></p></details>
+      <details class="earlier" id="earlier"><summary>Earlier highlights</summary><div id="earlier-list" class="cite-list"></div></details>
+    </section>
+
+    <section id="covers" class="panel" role="tabpanel" aria-labelledby="tab-covers" hidden>
+      <h2>Journal covers</h2>
+      <p class="panel-lede" id="cov-lede"></p>
+      <ul id="cover-grid" class="cover-grid"></ul>
+    </section>
+  </div>
+</main>
+
+<footer class="site-foot">
+  <div class="foot-in">
+    <div id="foot-info"></div>
+    <nav aria-label="Footer">
+      <a href="index.html#research">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="members.html">People</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="js/common.js"></script>
+<script src="js/publications.js"></script>
+</body>
+</html>

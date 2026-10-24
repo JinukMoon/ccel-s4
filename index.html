@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CCEL — Seoul National University</title>
+<meta name="description" content="Computational Catalysis and Emerging Materials Laboratory, Department of Materials Science and Engineering, Seoul National University.">
+<link rel="preload" as="image" href="_shared/scroll/hero_poster.webp">
+<link rel="stylesheet" href="_shared/brand/brand.css">
+<link rel="stylesheet" href="css/site.css">
+<script src="_shared/content.js"></script>
+</head>
+<body class="home">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="head-in">
+    <a class="brand" href="index.html" aria-label="CCEL home"><img class="ccel-logo" data-logo src="_shared/img/logo2.png" alt="CCEL"></a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav"><span class="bars" aria-hidden="true"></span><span class="menu-label">Menu</span></button>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <a href="index.html#research">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="members.html">People</a>
+      <a href="index.html#news">News</a>
+      <a href="index.html#join">Join Us</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="split">
+  <div class="stage-col">
+    <div class="stage" data-stage aria-hidden="true">
+      <img class="stage-poster" src="_shared/scroll/hero_poster.webp" alt="">
+      <canvas></canvas>
+      <div class="stage-cap"><span class="cap-num">01 / 08</span><span class="cap-name">Overview</span><span class="cap-bar"><i></i></span></div>
+    </div>
+  </div>
+
+  <div class="col">
+    <section id="top" class="intro" data-cap="Overview" aria-labelledby="lab-name">
+      <p class="eyebrow" id="affil"></p>
+      <h1 id="lab-name"></h1>
+      <p class="identity" id="identity"></p>
+      <p class="tagline" id="tagline"></p>
+      <dl class="facts" id="facts"></dl>
+      <nav class="area-index" aria-label="Research areas">
+        <p class="label">Research areas</p>
+        <ol id="area-index"></ol>
+      </nav>
+      <noscript><p class="noscript">This page renders its content from the lab's data file and needs JavaScript. The publication list is at <a href="publications.html">publications.html</a>.</p></noscript>
+    </section>
+
+    <section id="research" class="sec" data-cap="Research" aria-labelledby="h-research">
+      <h2 id="h-research">Research</h2>
+      <div id="research-intro" class="prose"></div>
+      <figure class="loop" id="research-loop"></figure>
+      <div id="areas"></div>
+    </section>
+
+    <section id="publications" class="sec" data-cap="Selected Publications" aria-labelledby="h-selected">
+      <h2 id="h-selected">Selected Publications</h2>
+      <p class="sec-lede" id="selected-lede"></p>
+      <div id="selected" class="cite-list"></div>
+      <p class="more"><a href="publications.html">All publications</a><a href="publications.html#covers">Journal covers</a></p>
+    </section>
+
+    <section id="highlights" class="sec" data-cap="Recent Highlights" aria-labelledby="h-highlights">
+      <h2 id="h-highlights">Recent Highlights</h2>
+      <p class="sec-lede">Recent lab-led papers, filled automatically when a paper is added.</p>
+      <div id="recent" class="cite-list"></div>
+      <details class="rules" id="rules"><summary>How these two lists are chosen</summary><p></p></details>
+    </section>
+
+    <section id="people" class="sec" data-cap="People" aria-labelledby="h-people">
+      <h2 id="h-people">People</h2>
+      <div id="pi" class="pi"></div>
+      <div id="roster"></div>
+      <p class="more"><a href="members.html">All members and alumni</a></p>
+    </section>
+
+    <section id="news" class="sec" data-cap="News" aria-labelledby="h-news">
+      <h2 id="h-news">News</h2>
+      <ul id="news-list" class="news"></ul>
+    </section>
+
+    <section id="join" class="sec" data-cap="Join Us" aria-labelledby="h-join">
+      <h2 id="h-join">Join Us</h2>
+      <p id="join-lede" class="sec-lede"></p>
+      <details class="ko" open><summary>Open positions — recruitment notice (Korean)</summary><p lang="ko" id="opening-ko"></p></details>
+      <details class="ko"><summary>About the lab (Korean)</summary><p lang="ko" id="about-ko"></p></details>
+    </section>
+
+    <section id="contact" class="sec" data-cap="Contact" aria-labelledby="h-contact">
+      <h2 id="h-contact">Contact</h2>
+      <dl id="contact-list" class="contact"></dl>
+      <figure class="group" id="group-photo"></figure>
+    </section>
+  </div>
+</main>
+
+<footer class="site-foot">
+  <div class="foot-in">
+    <div id="foot-info"></div>
+    <nav aria-label="Footer">
+      <a href="index.html#research">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="members.html">People</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="js/common.js"></script>
+<script src="js/home.js"></script>
+<script src="js/stage.js"></script>
+</body>
+</html>
