@@ -10,6 +10,10 @@
   var members = C.members || [], alumni = C.alumni || [];
   var nMembers = S.allPeople(members).length, nAlumni = S.allPeople(alumni).length;
   $('people-lede').textContent = nMembers + ' current members and ' + nAlumni + ' alumni.';
+  // group photo (moved here from the landing page's Contact block in v5)
+  var gp = (C.contact || {}).group_photo, lab = C.lab || {};
+  if (gp) $('group-photo').innerHTML = '<img src="' + esc(asset(gp)) + '" alt="Group photo of ' + esc(lab.name || 'the lab') + '" loading="lazy" decoding="async">';
+  else $('group-photo').hidden = true;
   $('subnav').innerHTML = ['<a href="#professor">Professor</a>'].concat(members.map(function (g) {
     return '<a href="#' + slug(g.group) + '">' + esc(g.group) + '</a>';
   })).concat(['<a href="#alumni">Alumni</a>']).join('');

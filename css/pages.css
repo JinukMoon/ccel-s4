@@ -95,7 +95,18 @@
 .cv-h { font-size: 19px; margin: 44px 0 16px; padding-top: 22px; border-top: 1px solid var(--rule); }
 .cv-title { font-size: 13px; color: var(--ink-2); line-height: 1.45; margin-top: 4px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 
+/* research page (moved from the landing in v5): intro + area contents beside the approach figure, then the areas */
+.r-headline { color: var(--navy); font-size: 20px; line-height: 1.5; max-width: 46em; }
+.r-top { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: 48px; align-items: start; padding: 36px 0 12px; }
+.r-top .loop { margin: 4px 0 0; }
+.r-areas { max-width: 880px; margin-top: 24px; border-top: 1px solid var(--rule); }
+.r-areas .area { padding: 40px 0 40px; }
+
+/* group photo on the members page (moved from the landing's Contact block in v5) */
+.page .group { margin: 28px 0 8px; }
+
 @media (max-width: 1100px) {
+  .r-top { grid-template-columns: 1fr; gap: 24px; }
   .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .alums { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .controls { grid-template-columns: repeat(3, minmax(0, 1fr)); }
