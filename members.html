@@ -19,11 +19,11 @@
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav"><span class="bars" aria-hidden="true"></span><span class="menu-label">Menu</span></button>
     <nav id="site-nav" class="site-nav" aria-label="Main">
       <a href="index.html">Welcome</a>
-      <a href="members.html#professor">Professor</a>
+      <a href="professor.html">Professor</a>
       <a href="members.html" aria-current="page">Members</a>
       <a href="research.html">Research</a>
       <a href="publications.html">Publications</a>
-      <a href="index.html#contact">Contact</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </div>
 </header>
@@ -34,7 +34,14 @@
     <header class="page-head">
       <h1>Members</h1>
       <p class="lede" id="people-lede"></p>
-      <nav class="subnav" aria-label="Groups" id="subnav"></nav>
+      <div class="mem-bar">
+        <div class="views" role="group" aria-label="Members to show">
+          <a class="view-btn" href="#current" data-view="current" aria-current="true">Current members <span class="count" id="n-current"></span></a>
+          <a class="view-btn" href="#alumni" data-view="alumni">Alumni <span class="count" id="n-alumni"></span></a>
+        </div>
+        <nav class="subnav" id="subnav-current" aria-label="Current member groups"></nav>
+        <nav class="subnav" id="subnav-alumni" aria-label="Alumni groups" hidden></nav>
+      </div>
       <div class="filter" role="group" aria-label="Show members by approach">
         <button type="button" data-type="" aria-pressed="true">All</button>
         <button type="button" data-type="computational" aria-pressed="false"><span class="type t-computational">Computational</span></button>
@@ -42,12 +49,15 @@
       </div>
     </header>
 
-    <figure class="group" id="group-photo"></figure>
-    <section id="professor" class="pg-sec prof" aria-labelledby="h-prof"></section>
-    <div id="groups"></div>
-    <section id="alumni" class="pg-sec" aria-labelledby="h-alumni">
+    <div id="current" class="view">
+      <div id="groups"></div>
+      <p class="view-next"><a href="#alumni">Alumni: former members and where they are now</a></p>
+    </div>
+    <section id="alumni" class="view pg-sec" aria-labelledby="h-alumni" hidden>
       <h2 id="h-alumni">Alumni</h2>
+      <p class="panel-lede">Former members, with their current positions as the lab records them.</p>
       <div id="alumni-groups"></div>
+      <p class="view-next view-back"><a href="#current">Current members</a></p>
     </section>
   </div>
 </main>
@@ -57,11 +67,11 @@
     <div id="foot-info"></div>
     <nav aria-label="Footer">
       <a href="index.html">Welcome</a>
-      <a href="members.html#professor">Professor</a>
+      <a href="professor.html">Professor</a>
       <a href="members.html">Members</a>
       <a href="research.html">Research</a>
       <a href="publications.html">Publications</a>
-      <a href="index.html#contact">Contact</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </div>
 </footer>

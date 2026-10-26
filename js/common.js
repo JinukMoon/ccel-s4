@@ -216,7 +216,7 @@
 
   window.S4 = {
     C: C, esc: esc, rich: rich, plain: plain, asset: asset, secure: secure, doiUrl: doiUrl,
-    splitName: splitName, linkIcons: linkIcons, allPeople: allPeople,
+    splitName: splitName, linkIcons: linkIcons, allPeople: allPeople, ICON: ICON,
     areaByNumeral: areaByNumeral, byNo: byNo, coverFor: coverFor, paperForCover: paperForCover,
     citation: citation, source: source, STATUS_LABEL: STATUS_LABEL, setDefer: setDefer, srcAttr: srcAttr, lazy: lazy,
     initHeader: initHeader, initFooter: initFooter, settleHash: settleHash

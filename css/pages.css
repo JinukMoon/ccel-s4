@@ -127,3 +127,85 @@
   .card-photo { width: 72px; height: 90px; }
   .yr-h { font-size: 21px; }
 }
+
+/* ---------- v6: members views (current / alumni) ---------- */
+.mem-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; margin-top: 20px; }
+.mem-bar .subnav { margin-top: 0; }
+.mem-bar .subnav[hidden] { display: none; }
+.views { display: inline-flex; border: 1px solid var(--navy); border-radius: 4px; overflow: hidden; flex: none; }
+.view-btn {
+  display: inline-flex; align-items: center; gap: 2px; padding: 9px 16px; min-height: 44px;
+  font-size: 15.5px; font-weight: 500; color: var(--navy); background: #fff; text-decoration: none;
+}
+.view-btn + .view-btn { border-left: 1px solid var(--navy); }
+.view-btn:hover { background: var(--wash); color: var(--navy-2); }
+.view-btn[aria-current="true"] { background: var(--navy); color: #fff; }
+.view-btn .count { color: inherit; opacity: .8; font-size: 14px; }
+.view { scroll-margin-top: calc(var(--hdr-c) + 16px); }
+.view[hidden] { display: none; }
+/* the approach filter hides cards with [hidden]; display:grid on .card/.alum would override it */
+.card[hidden], .alum[hidden], .grp[hidden], .alum-grp[hidden] { display: none; }
+.view-next { margin-top: 28px; font-size: 16px; font-weight: 500; }
+.view-next a::after { content: " \2192"; }
+.view-back a::after { content: ""; }
+.view-back a::before { content: "\2190 "; }
+#alumni .panel-lede { margin: -6px 0 22px; }
+#alumni .alum-grp:first-of-type { border-top: 0; padding-top: 0; }
+
+/* ---------- v6: professor page ---------- */
+.prof-page { padding-top: 36px; }
+.prof-page .prof-photo { width: 220px; height: auto; aspect-ratio: 413 / 531; }
+.prof-page.prof { grid-template-columns: 220px minmax(0, 1fr); gap: 40px; }
+.prof-aff { margin-top: 2px; color: var(--ink-2); line-height: 1.55; }
+.prof-aff span { display: block; }
+.prof-aff .first { color: var(--ink); font-weight: 500; }
+.prof-page .prof-contact > div { grid-template-columns: 82px minmax(0, 1fr); }
+.prof-page .prof-links a { display: inline-flex; align-items: center; gap: 7px; }
+.prof-page .prof-links .ico { width: 26px; height: 26px; }
+.cv-sec { padding-top: 36px; }
+.cv-sec > h2 { padding-bottom: 10px; border-bottom: 2px solid var(--ink); margin-bottom: 4px; }
+.cv-list { list-style: none; margin: 0; padding: 0; }
+.cv-item { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 24px; padding: 16px 0; border-bottom: 1px solid var(--rule); }
+.cv-date { color: var(--ink-3); font-size: 15px; font-variant-numeric: tabular-nums; padding-top: 1px; }
+.cv-inst { font-weight: 500; color: var(--ink); }
+.cv-inst .loc { font-weight: 400; color: var(--ink-3); }
+.cv-deg { color: var(--ink-2); font-size: 16px; }
+.cv-deg b { color: var(--ink); font-weight: 500; }
+.cv-thesis { color: var(--ink-2); font-size: 15px; margin-top: 4px; }
+.cv-adv { color: var(--ink-3); font-size: 14.5px; margin-top: 2px; }
+.cv-org { padding: 18px 0 10px; border-bottom: 1px solid var(--rule); }
+.cv-org h3 { font-size: 17px; font-weight: 500; margin-bottom: 6px; }
+.cv-org h3 .loc { font-weight: 400; color: var(--ink-3); }
+.cv-svc { padding: 12px 0 4px; border-bottom: 1px solid var(--rule); }
+.cv-roles { list-style: none; margin: 0; padding: 0; }
+.cv-roles li { display: grid; grid-template-columns: minmax(0, 1fr) 190px; gap: 20px; padding: 5px 0; font-size: 15.5px; line-height: 1.5; color: var(--ink-2); }
+.cv-roles .role { color: var(--ink); }
+.cv-roles .when { color: var(--ink-3); font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
+
+/* ---------- v6: contact page ---------- */
+.contact-page { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 48px; align-items: start; padding: 36px 0 8px; }
+.contact-photo { margin: 0; }
+.contact-photo img { display: block; width: 100%; height: auto; aspect-ratio: 6944 / 4496; object-fit: cover; border-radius: 4px; background: var(--wash); }
+.contact-body h2 { font-size: 24px; line-height: 1.35; margin-bottom: 18px; }
+.contact-body .contact > div { grid-template-columns: 136px minmax(0, 1fr); }
+.contact-body .sec-note { margin-top: 18px; }
+.nw { white-space: nowrap; }
+
+@media (max-width: 1100px) {
+  .contact-page { grid-template-columns: 1fr; gap: 28px; }
+}
+@media (max-width: 959px) {
+  .prof-page.prof { grid-template-columns: 140px minmax(0, 1fr); gap: 22px; }
+  .prof-page .prof-photo { width: 140px; }
+  .cv-item { grid-template-columns: 1fr; gap: 2px; }
+  .cv-roles li { grid-template-columns: 1fr; gap: 0; padding: 7px 0; }
+  .cv-roles .when { text-align: left; font-size: 14.5px; }
+  .views { width: 100%; }
+  .view-btn { flex: 1 1 auto; justify-content: center; padding: 9px 12px; white-space: nowrap; }
+}
+@media (max-width: 520px) {
+  .prof-page.prof { grid-template-columns: 1fr; }
+  .prof-page .prof-photo { width: 150px; }
+  .prof-page .prof-contact > div { grid-template-columns: 1fr; gap: 0; }
+  .contact-body .contact > div { grid-template-columns: 1fr; }
+}
